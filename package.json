@@ -1,0 +1,37 @@
+{
+	"name": "kotatsu-sync",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "wxt",
+		"dev:firefox": "wxt -b firefox",
+		"dev:multi": "concurrently \"pnpm dev:firefox\" \"node dev.mjs\" ",
+		"build": "wxt build",
+		"build:firefox": "wxt build -b firefox",
+		"zip": "wxt zip",
+		"zip:firefox": "wxt zip -b firefox",
+		"compile": "vue-tsc --noEmit",
+		"postinstall": "wxt prepare"
+	},
+	"dependencies": {
+		"@tailwindcss/vite": "^4.3.0",
+		"@webext-core/messaging": "^3.0.2",
+		"@webext-core/proxy-service": "^2.0.1",
+		"oxfmt": "^0.54.0",
+		"peerjs": "^1.5.5",
+		"tailwindcss": "^4.3.0",
+		"vue": "^3.5.29",
+		"web-ext": "^10.3.0",
+		"xstate": "^5.32.0",
+		"zustand": "^5.0.14"
+	},
+	"devDependencies": {
+		"@wxt-dev/module-vue": "^1.0.3",
+		"concurrently": "^10.0.3",
+		"dotenv": "^17.4.2",
+		"typescript": "^5.9.3",
+		"vue-tsc": "^3.2.5",
+		"wxt": "^0.20.26"
+	}
+}
