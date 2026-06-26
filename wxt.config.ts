@@ -8,6 +8,14 @@ export default defineConfig({
 	targetBrowsers: ["firefox", "chrome", "safari"],
 	srcDir: "src",
 	manifest: {
+		browser_specific_settings: {
+			gecko: {
+				id: "kotatsu-sync@nondotxyz",
+				data_collection_permissions: {
+					required: ["none"],
+				},
+			},
+		},
 		permissions: ["storage"],
 
 		// Lets the background script call Cloudflare's TURN API without CORS issues.
